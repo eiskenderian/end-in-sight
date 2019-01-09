@@ -21,14 +21,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)reactNativeActivated:(id)sender {
+- (IBAction)activateReactNative:(id)sender {
     NSLog(@"React Native is activated");
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
     
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
                                 moduleName: @"RootContainer"
-                         initialProperties: @{}
+                         initialProperties: @{@"height": @(floor(screenSize.height)), @"width": @(floor(screenSize.width))}
                              launchOptions: nil];
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view = rootView;
