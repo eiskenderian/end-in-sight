@@ -1,15 +1,7 @@
-import React from 'react';
-import {AppRegistry, Text, View} from 'react-native';
+/** @format */
 
-class RootContainer extends React.Component {
-    render() {
-        return (
-            <View style={{ backgroundColor: 'red' }}>
-                <Text style={{ fontWeight: 'bold' }}>End in sight</Text>
-            </View>
-        );
-    }
-}
+import { AppRegistry } from 'react-native';
+import App from './App';
+import { name } from './app.json';
 
-// Module name
-AppRegistry.registerComponent('RootContainer', () => RootContainer);
+AppRegistry.registerComponent(name, () => App);

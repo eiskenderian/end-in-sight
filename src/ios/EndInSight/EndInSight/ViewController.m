@@ -28,7 +28,7 @@
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
-                                moduleName: @"RootContainer"
+                                moduleName: @"EndInSightApp"
                          initialProperties: @{@"height": @(floor(screenSize.height)), @"width": @(floor(screenSize.width))}
                              launchOptions: nil];
     UIViewController *vc = [[UIViewController alloc] init];
